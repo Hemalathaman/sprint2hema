@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+
+
+
+    bookstore:
+        build: demo
+        ports:
+        - 8006:8006
+
+
+
+    postgres:
+        image: postgres:14.5
+        ports:
+        - 5432:5432
+
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: pgadmin
+            POSTGRES_DB: bookuserdb
